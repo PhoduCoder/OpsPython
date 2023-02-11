@@ -1,0 +1,12 @@
+The optimized code, the get_patch_status function uses the paramiko library to establish an SSH connection to a server, retrieve the patch status using the exec_command method, and return the output.
+
+The patch_report_generator function uses a generator to yield a report for each server. The generator function iterates over the list of servers, calls the get_patch_status function to retrieve the patch status for each server, and yields a report for each server.
+
+The write_patch_report function writes the patch report to a file. This function uses a generator expression to iterate over the generator returned by the patch_report_generator function, and writes each report to the file.
+
+The main function reads the list of servers from a CSV file, and calls the write_patch_report function to generate the patch report.
+
+This optimized code is more memory-efficient than the previous code because it generates and writes the report for each server one at a time, instead of building a list of reports in memory. This can be especially beneficial when working with large numbers of servers.
+
+
+

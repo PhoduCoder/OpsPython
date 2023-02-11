@@ -1,0 +1,12 @@
+The key_file in the Python script is the private key file used for SSH key-based authentication. In order to use this authentication method, you'll need to generate a public/private key pair and copy the public key to the servers you want to connect to. The private key will be stored on your local machine and used by the script to authenticate to the servers.
+Here are the steps to set up SSH key-based authentication and use the key_file in the script:
+
+Generate a public/private key pair: On your local machine, use the ssh-keygen command to generate a public/private key pair. For example: ssh-keygen -t rsa -b 2048. This will create a private key file named id_rsa (or similar) in the ~/.ssh directory, and a public key file with the same name but with the .pub extension.
+
+Copy the public key to the servers: Use the ssh-copy-id command to copy the public key to each server. For example: ssh-copy-id root@<server_ip> (replace <server_ip> with the actual IP address of the server). You'll be prompted to enter the password for the root user on the server.
+
+Update the script to use your private key file: In the Python script, replace the value of the key_file variable with the path to your private key file. For example: `key_file = "/home/user/.ssh/id_rsa".
+
+Run the script: Once you have completed these steps, you should be able to run the script and it will use SSH key-based authentication to connect to each server and retrieve the patch information.
+
+Note: It's important to keep your private key file secure and protected, as it can be used to gain access to your servers. You can set permissions on the file to prevent unauthorized access (e.g., chmod 600 ~/.ssh/id_rsa).

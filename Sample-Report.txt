@@ -1,0 +1,27 @@
+Weekly Patch Report
+
+Server Name: ubuntu-server-1
+IP Address: 192.168.1.100
+Patch Status: Up-to-date
+
+Server Name: ubuntu-server-2
+IP Address: 192.168.1.101
+Patch Status: Need to update 2 packages
+
+Server Name: ubuntu-server-3
+IP Address: 192.168.1.102
+Patch Status: Up-to-date
+
+Server Name: centos-server-1
+IP Address: 192.168.1.103
+Patch Status: Need to update 4 packages
+
+Server Name: centos-server-2
+IP Address: 192.168.1.104
+Patch Status: Up-to-date
+
+Server Name: centos-server-3
+IP Address: 192.168.1.105
+Patch Status: Need to update 1 package
+
+...

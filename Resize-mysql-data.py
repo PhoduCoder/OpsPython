@@ -1,3 +1,7 @@
+# Don't use this script in production. 
+# This will cause your database to now refer to a completely new location for data directory 
+# and this will cause havoc
+
 import boto3
 import paramiko
 
@@ -60,3 +64,5 @@ if disk_usage > disk_usage_threshold:
 
 # Close the SSH connection
 ssh_client.close()
+
+
